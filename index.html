@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chemia Atelier — NCTB SSC &amp; HSC Interactive 3D Chemistry Laboratory</title>
+  <meta name="description" content="Daylight European higher-education 3D chemistry studio aligned with Bangladesh NCTB Class 9-10 (SSC) and Class 11-12 (HSC 1st & 2nd Paper) syllabus." />
+  <link rel="stylesheet" href="./src/styles/tokens.css" />
+  <link rel="stylesheet" href="./src/styles/layout.css" />
+</head>
+<body>
+  <a href="#main-workspace" class="skip-link">Skip to chemistry laboratory workspace</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <button type="button" class="brand-mark" id="brand-home-btn" aria-label="Return to Chemia Atelier Overview">
+        <span class="brand-code">NCTB · SSC &amp; HSC</span>
+        <span class="brand-title">Chemia Atelier</span>
+        <span class="brand-dept">Department of Analytical, Inorganic &amp; Physical Chemistry</span>
+      </button>
+
+      <nav class="primary-nav" aria-label="Primary sections">
+        <button type="button" class="nav-tab active" data-route="overview">01 Overview</button>
+        <button type="button" class="nav-tab" data-route="studio">02 Virtual Lab</button>
+        <button type="button" class="nav-tab" data-route="practical">03 Practical &amp; Board Guide</button>
+        <button type="button" class="nav-tab" data-route="assessment">04 Diagnostic MCQ</button>
+      </nav>
+
+      <div class="header-ledger" aria-live="polite">
+        <span class="ledger-pill">Stamps: <strong id="header-stamps-count">0 / 24</strong></span>
+        <span class="ledger-pill">MCQ: <strong id="header-quiz-score">0 / 8</strong></span>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-workspace">
+    <!-- ===================================================================
+         VIEW 01: ACADEMIC OVERVIEW & APPARATUS CATALOGUE
+         =================================================================== -->
+    <section id="view-overview" class="app-view active" aria-labelledby="hero-heading">
+      <div class="editorial-shell">
+        <div class="editorial-hero">
+          <div>
+            <span class="eyebrow-label">Bangladesh NCTB SSC &amp; HSC Chemistry Laboratory Monograph</span>
+            <h1 id="hero-heading" class="hero-headline">
+              Quantitative Titration, Flame Spectroscopy &amp; 3D Molecular Physics.
+            </h1>
+            <p class="hero-lead">
+              Chemia Atelier pairs calibrated chemical computation with an interactive Three.js laboratory across eight core chapters of SSC (Class 9–10) and HSC (1st &amp; 2nd Paper) Chemistry. Standardize solutions drop by drop, inspect potassium flames through blue cobalt glass, compress VSEPR lone pairs, and crystallize ammonium halide diffusion rings.
+            </p>
+            <div class="hero-actions">
+              <button type="button" class="btn btn-primary" id="hero-enter-lab-btn">
+                Open 3D Chemistry Workbench
+              </button>
+              <button type="button" class="btn btn-outline" id="hero-open-practical-btn">
+                HSC 25-Mark Practical Guide
+              </button>
+            </div>
+
+            <div class="spec-strip">
+              <div>
+                <div class="spec-item-num">08</div>
+                <div class="spec-item-label">Calibrated 3D Benches</div>
+              </div>
+              <div>
+                <div class="spec-item-num">24</div>
+                <div class="spec-item-label">Auto-Verified Practical Stamps</div>
+              </div>
+              <div>
+                <div class="spec-item-num">SSC · HSC</div>
+                <div class="spec-item-label">1st &amp; 2nd Paper Aligned</div>
+              </div>
+            </div>
+          </div>
+
+          <figure class="editorial-figure">
+            <img src="./media/hero-titration-bench.jpg" alt="Graduated glass burette mounted in brass clamp stand above pale pink titration conical flask in sunlit laboratory" />
+            <figcaption class="figure-caption">
+              <span>Plate I — Volumetric Burette &amp; Phenolphthalein Endpoint Bench</span>
+              <span>HSC 2nd Paper · Ch. 3</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="section-header-row">
+          <div>
+            <span class="eyebrow-label">Curriculum Apparatus Index</span>
+            <h2 class="section-heading">Eight Interactive Chemistry Benches</h2>
+          </div>
+          <p class="section-sub">
+            Select any laboratory bench below to load its 3D glassware or molecular model, physical vernier sliders, live 2D analytical curve, and practical stamp criteria.
+          </p>
+        </div>
+
+        <div class="apparatus-index" id="overview-apparatus-list" role="list"></div>
+
+        <div class="visual-plates-strip">
+          <figure class="editorial-figure">
+            <img src="./media/flame-qualitative-rack.jpg" alt="Test tube rack displaying colored inorganic precipitates next to brass Bunsen burner and porcelain mortar" />
+            <figcaption class="figure-caption">
+              <span>Plate II — Wet Precipitates &amp; Flame Analysis</span>
+              <span>HSC 1st · Ch. 2</span>
+            </figcaption>
+          </figure>
+
+          <figure class="editorial-figure">
+            <img src="./media/electrochemistry-cell.jpg" alt="Daniell galvanic cell with copper sulfate and zinc sulfate beakers connected by U-tube salt bridge reading 1.10 V" />
+            <figcaption class="figure-caption">
+              <span>Plate III — Daniell Cell &amp; Salt Bridge (1.10 V)</span>
+              <span>HSC 2nd · Ch. 4</span>
+            </figcaption>
+          </figure>
+
+          <figure class="editorial-figure">
+            <img src="./media/molecular-models-bench.jpg" alt="Ball-and-stick 3D stereochemical molecular models on oak laboratory table with brass caliper" />
+            <figcaption class="figure-caption">
+              <span>Plate IV — VSEPR &amp; Chiral Stereochemistry</span>
+              <span>HSC 1st Ch. 3 · 2nd Ch. 2</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         VIEW 02: INTERACTIVE 3D VIRTUAL CHEMISTRY WORKBENCH
+         =================================================================== -->
+    <section id="view-studio" class="app-view studio-mode" aria-label="Interactive 3D Chemistry Workbench">
+      <div class="module-selector-bar" id="studio-module-bar" role="tablist" aria-label="Chemistry Benches"></div>
+
+      <div class="studio-grid">
+        <div class="viewport-pane">
+          <div id="webgl-mount"></div>
+
+          <div class="viewport-equation-plate">
+            <div class="vp-eq-tag" id="vp-curriculum-tag">SSC Ch. 9 · HSC 2nd Paper Ch. 3</div>
+            <div class="vp-eq-math" id="vp-equation-math">pH = -log[H+]  ·  V_eq = (C_a · V_a) / C_t</div>
+            <span class="vp-status-flag" id="vp-status-badge">Acidic Region</span>
+          </div>
+
+          <div class="viewport-toolbar" role="group" aria-label="Camera Presets">
+            <button type="button" class="vp-tool-btn active" data-cam="default">Bench View</button>
+            <button type="button" class="vp-tool-btn" data-cam="close">Close-Up</button>
+            <button type="button" class="vp-tool-btn" data-cam="side">Side Elevation</button>
+            <button type="button" class="vp-tool-btn" data-cam="top">Plan View</button>
+          </div>
+
+          <div class="bench-banner" id="bench-toast" role="status" aria-live="polite">
+            <div class="bench-banner-title" id="bench-toast-title">Practical Stamp Verified</div>
+            <div class="bench-banner-detail" id="bench-toast-detail">Recorded in student laboratory ledger.</div>
+          </div>
+
+          <div class="viewport-telemetry-bar">
+            <div class="telemetry-readouts" id="vp-telemetry-cells"></div>
+            <div class="orbit-caption">Drag to orbit · Scroll to zoom · Right-drag to pan</div>
+          </div>
+        </div>
+
+        <aside class="console-pane" aria-label="Laboratory Controls and Plotter">
+          <div class="console-tabs" role="tablist">
+            <button type="button" class="console-tab active" data-ctab="controls">Controls &amp; Plot</button>
+            <button type="button" class="console-tab" data-ctab="stamps">Stamps (3)</button>
+            <button type="button" class="console-tab" data-ctab="theory">Theory &amp; MCQ</button>
+          </div>
+
+          <!-- Tab 1: Controls + High-DPI 2D Analytical Plotter -->
+          <div class="console-section active" id="csec-controls">
+            <div id="dynamic-controls-mount" style="display:flex; flex-direction:column; gap:0.75rem;"></div>
+
+            <div class="plotter-plate">
+              <canvas id="scientific-plotter" aria-label="Real-time scientific chemistry plot"></canvas>
+            </div>
+          </div>
+
+          <!-- Tab 2: Practical Stamps -->
+          <div class="console-section" id="csec-stamps">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span class="eyebrow-label" style="margin:0;">Practical Verification Tasks</span>
+              <button type="button" class="btn btn-outline btn-sm" id="reset-bench-btn">Reset Bench</button>
+            </div>
+            <div id="dynamic-stamps-mount" style="display:flex; flex-direction:column; gap:0.75rem;"></div>
+          </div>
+
+          <!-- Tab 3: Theory Notes, Glossary & Quick MCQ -->
+          <div class="console-section" id="csec-theory">
+            <div id="dynamic-theory-mount"></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         VIEW 03: HSC & SSC PRACTICAL BOARD REFERENCE GUIDE
+         =================================================================== -->
+    <section id="view-practical" class="app-view" aria-labelledby="practical-heading">
+      <div class="editorial-shell">
+        <span class="eyebrow-label">NCTB Board Practical Manual (25 Marks)</span>
+        <h2 id="practical-heading" class="hero-headline" style="max-width:26ch;">
+          Volumetric &amp; Qualitative Practical Reference Tables.
+        </h2>
+        <p class="hero-lead">
+          Structured breakdown of Bangladesh Education Board SSC &amp; HSC Chemistry Practical examinations, including primary vs secondary standard reagents, flame test wavelengths through cobalt silicate glass, and confirmatory wet precipitates.
+        </p>
+
+        <div class="audit-table-wrap" style="margin-bottom:2.8rem;">
+          <table class="audit-table">
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Syllabus Paper</th>
+                <th>Board Practical Experiment</th>
+                <th>Allocation</th>
+                <th>Apparatus &amp; Reagents</th>
+                <th>Grading Criterion</th>
+              </tr>
+            </thead>
+            <tbody id="practical-board-tbody"></tbody>
+          </table>
+        </div>
+
+        <div class="section-header-row">
+          <div>
+            <span class="eyebrow-label">Inorganic Salt Detective Matrix</span>
+            <h3 class="section-heading">Cation Flame &amp; Confirmatory Wet Test Reference</h3>
+          </div>
+          <button type="button" class="btn btn-primary btn-sm" data-launch-module="qualitative">
+            Launch 02 Salt &amp; Flame Bench
+          </button>
+        </div>
+
+        <div class="audit-table-wrap" style="margin-bottom:3rem;">
+          <table class="audit-table">
+            <thead>
+              <tr>
+                <th>Salt Formula</th>
+                <th>Cation / Anion</th>
+                <th>Naked-Eye Flame</th>
+                <th>Through Cobalt Glass</th>
+                <th>+ K4[Fe(CN)6] Precipitate</th>
+                <th>+ AgNO3 / BaCl2 Test</th>
+              </tr>
+            </thead>
+            <tbody id="salt-reference-tbody"></tbody>
+          </table>
+        </div>
+
+        <span class="eyebrow-label">Chapter-by-Chapter Monograph</span>
+        <h3 class="section-heading" style="margin-bottom:1rem;">Equations &amp; Board Exam Notes</h3>
+        <div id="monograph-list-mount"></div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         VIEW 04: FULL 8-MODULE NCTB BOARD DIAGNOSTIC MCQ
+         =================================================================== -->
+    <section id="view-assessment" class="app-view" aria-labelledby="assessment-heading">
+      <div class="editorial-shell">
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1rem; padding-bottom:1.8rem; border-bottom:1px solid var(--border-subtle);">
+          <div>
+            <span class="eyebrow-label">Board Examination Self-Assessment</span>
+            <h2 id="assessment-heading" class="section-heading">NCTB SSC &amp; HSC Chemistry Diagnostic (8 Questions)</h2>
+            <p class="section-sub" style="margin-top:0.35rem;">
+              Test quantitative mastery across pH indicators, qualitative precipitates, Rydberg wavelengths, VSEPR angles, Le Chatelier shifts, Faraday’s law, racemic compensation, and Graham’s law.
+            </p>
+          </div>
+          <button type="button" class="btn btn-outline btn-sm" id="reset-progress-btn">
+            Reset Saved Ledger
+          </button>
+        </div>
+
+        <div id="full-assessment-mount" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:1.35rem; margin-top:2rem;"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span><strong>Chemia Atelier v1.0</strong> — Calibrated Interactive 3D Chemistry Studio for NCTB SSC &amp; HSC (1st &amp; 2nd Paper)</span>
+      <span>01. Chemistry Edition · Precision SI &amp; Molar Units Verified</span>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

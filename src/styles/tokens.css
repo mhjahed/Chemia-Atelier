@@ -1,0 +1,45 @@
+:root {
+  /* Daylight European Analytical Chemistry Editorial Palette — Strict Light Mode */
+  --bg-page: #F6F5F0;
+  --bg-plate: #FFFFFF;
+  --bg-subtle: #EFEDE6;
+  --bg-well: #E5E2D9;
+  --bg-glass: rgba(250, 249, 245, 0.88);
+
+  /* Architectural Drafting Rules */
+  --border-subtle: #DDD9CE;
+  --border-strong: #1C2026;
+  --border-accent: #134E4A;
+
+  /* Typography Ink Hierarchy (WCAG AAA / AA verified) */
+  --ink-primary: #14181F;
+  --ink-secondary: #434A54;
+  --ink-muted: #6C7480;
+  --ink-inverse: #FAF9F6;
+
+  /* Calibrated Analytical Signal Accents (Oxford Viridian + Cinnabar + Brass) */
+  --accent-primary: #134E4A;
+  --accent-primary-hover: #0D3835;
+  --accent-primary-tint: #E4F1EF;
+
+  --accent-vermilion: #B83A2D;
+  --accent-vermilion-hover: #962D22;
+  --accent-vermilion-tint: #F9EBE9;
+
+  --accent-emerald: #1F6E4A;
+  --accent-emerald-tint: #E6F3EC;
+
+  /* Font Stacks */
+  --font-serif: Georgia, 'Times New Roman', Times, serif;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+
+  /* Sharp Architectural Geometry */
+  --radius-sharp: 2px;
+
+  /* Subtle Tactile Instrument Shadows */
+  --shadow-plate: 0 1px 3px rgba(20, 24, 31, 0.05), 0 6px 18px rgba(20, 24, 31, 0.04);
+  --shadow-glass: 0 4px 16px rgba(20, 24, 31, 0.07);
+  --shadow-well-inset: inset 1.5px 1.5px 3px rgba(20, 24, 31, 0.13), inset -1px -1px 2px rgba(255, 255, 255, 0.9);
+  --shadow-knob: 0 1px 3px rgba(20, 24, 31, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}

@@ -1,0 +1,23 @@
+{
+  "name": "chemia-atelier-ssc-hsc-chemistry-laboratory",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Chemia Atelier — Interactive 3D Chemistry & Practical Laboratory aligned with Bangladesh NCTB SSC & HSC Chemistry (1st & 2nd Paper).",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node serve-local.mjs",
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173",
+    "verify:chemistry": "node tests/verify-chemistry.mjs"
+  },
+  "dependencies": {
+    "three": "^0.170.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.11"
+  }
+}
